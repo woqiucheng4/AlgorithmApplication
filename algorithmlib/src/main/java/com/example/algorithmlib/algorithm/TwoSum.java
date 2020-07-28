@@ -1,5 +1,6 @@
-package com.example.algorithmapplication.algorithm;
-import com.example.algorithmapplication.QCLog;
+package com.example.algorithmlib.algorithm;
+
+import com.example.algorithmlib.QCLog;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,10 @@ import java.util.Map;
  所以返回 [0, 1]
  */
 public class TwoSum {
+
+    public static void main(String[] args){
+        testTwoSum();
+    }
 
     public static void testTwoSum(){
         int[] testData = new int[]{2,2,3,4,5,6,2,3,4,5};

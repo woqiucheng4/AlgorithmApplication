@@ -1,8 +1,14 @@
-package com.example.algorithmapplication.algorithm;
+package com.example.algorithmlib.algorithm;
 
-import com.example.algorithmapplication.QCLog;
+
+import com.example.algorithmlib.QCLog;
 
 public class ReplaceSpace {
+
+
+    public static void main(String[] args){
+        testReplaceSpace();
+    }
 
     public static void testReplaceSpace() {
         String testData = "we are happy ! ";

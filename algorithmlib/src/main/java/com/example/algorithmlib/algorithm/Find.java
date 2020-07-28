@@ -1,6 +1,7 @@
-package com.example.algorithmapplication.algorithm;
+package com.example.algorithmlib.algorithm;
 
-import com.example.algorithmapplication.QCLog;
+
+import com.example.algorithmlib.QCLog;
 
 /**
  * 在一个二维数组中（每个一维数组的长度相同），
@@ -9,6 +10,10 @@ import com.example.algorithmapplication.QCLog;
  * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
  */
 public class Find {
+
+    public static void main(String[] args){
+        testFindNum();
+    }
 
     public static void testFindNum() {
         int[][] testData = {{1, 2, 3}, {4, 5, 6}, {5, 6, 7}, {7, 8, 9}};
