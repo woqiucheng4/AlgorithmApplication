@@ -29,7 +29,6 @@ public class BinarySearch {
     }
 
     public static int upperBound(int[] array, int target) {
-        // write code here
         int left = 0, right = array.length - 1;
         while (left < right) {
             int mid = left + (right - left) / 2;
