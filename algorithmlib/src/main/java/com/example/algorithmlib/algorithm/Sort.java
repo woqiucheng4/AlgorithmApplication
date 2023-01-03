@@ -3,6 +3,7 @@ package com.example.algorithmlib.algorithm;
 import com.example.algorithmlib.QCLog;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Sort {
 
@@ -178,4 +179,34 @@ public class Sort {
         return stringBuilder.toString();
     }
 
+
+    /**
+     * 校验器
+     */
+    public boolean check() {
+        Random random = new Random();//用于生成随机数
+        int sampleSize = 10;//样本容量
+        int frequency = 10;//校验的次数
+        for (int i = 0; i < frequency; i++) {
+            int[] arr1 = new int[sampleSize];
+            int[] arr2 = new int[sampleSize];
+            //生成随机数数组
+            for (int j = 0; j < sampleSize; j++) {
+                arr1[j] = random.nextInt(sampleSize);
+            }
+            //将数组复制一份，一份使用Java自带的Arrays.sort排序，一份使用我们的算法排序
+            System.arraycopy(arr1, 0, arr2, 0, arr1.length);
+            Arrays.sort(arr1);
+            //这里让你的类继承BaseSort，然后重写sort方法，就是调用你的排序算法啦
+            this.bubbleSort(arr2);
+            for (int k = 0; k < arr1.length; k++) {
+                if(arr1[k] != arr2[k]) {
+                    //如果排序的结果出现不一致，表示算法错误
+                    return false;
+                }
+            }
+        }
+        //通过校验，算法正确
+        return true;
+    }
 }
